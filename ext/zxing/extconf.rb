@@ -20,7 +20,7 @@ lib = File.expand_path "#{ZXING_CPP_BUILD}/libzxing.a"
 $CPPFLAGS = %(-I#{cpp_include})
 $DLDFLAGS = %(-lstdc++ #{lib})
 
-if Dir["/usr/lib/libiconv.*"].size > 0
+if Dir["/usr/local/opt/libiconv/lib/libiconv.*"].size > 0
   $DLDFLAGS << %( -liconv)
 end
 
